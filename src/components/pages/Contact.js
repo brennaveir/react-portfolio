@@ -1,7 +1,7 @@
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 
-function BasicExample() {
+function Contact() {
   return (
     <Form class="mt-5">
        <Form.Group className="mb-3" controlId="nameInput">
@@ -23,4 +23,4 @@ function BasicExample() {
   );
 }
 
-export default BasicExample;
+export default Contact;
