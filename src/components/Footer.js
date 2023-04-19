@@ -6,7 +6,7 @@ import Navbar from 'react-bootstrap/Navbar';
 function Footer() {
     return (
         <footer>
-            <Navbar className="text-center" bg="dark" variant="light">
+            <Navbar className="text-center" bg="dark" variant="light" fixed="bottom">
                 <Container>
                  <Nav className="footer">
                         <Nav.Link href="https://github.com/brennaveir">Github</Nav.Link>

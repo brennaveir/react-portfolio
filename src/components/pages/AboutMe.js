@@ -2,7 +2,8 @@ import React from 'react';
 
 export default function AboutMe() {
   return (
-    <div>
+    <div className="bg-danger">
+    <img src="./porfolio-pic2.jpg"></img>
       <h1 className="mt-5 ">About me</h1>
       <p className="m-4 text-center">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque

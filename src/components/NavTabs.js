@@ -3,7 +3,7 @@ import React from 'react';
 function NavTabs({ currentPage, handlePageChange }) {
   return (
 
-    <ul className="nav nav-tabs">
+    <ul className="nav nav-tabs bg-warning">
       <h1>Brenn Voyles</h1>
       <li className="nav-item">
         <a
