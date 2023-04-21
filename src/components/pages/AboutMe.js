@@ -1,9 +1,11 @@
 import React from 'react';
+import Image from 'react-bootstrap/Image';
 
 export default function AboutMe() {
   return (
-    <div className="bg-danger">
-    <img src="./porfolio-pic2.jpg"></img>
+    <div className="sectionContainer">
+      <div className="aboutContainer d-flex flex-column align-items-center m-5">
+    <Image className="m-2 p-2"src="./porfolio-pic2.jpg"  alt="Brenn Voyles" rounded/>
       <h1 className="mt-5 ">About me</h1>
       <p className="m-4 text-center">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque
@@ -17,6 +19,7 @@ export default function AboutMe() {
         vitae lorem tortor. In elementum ultricies tempus. Interdum et malesuada
         fames ac ante ipsum primis in faucibus.
       </p>
+      </div>
     </div>
   );
 }

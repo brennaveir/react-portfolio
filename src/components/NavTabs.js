@@ -3,13 +3,13 @@ import React from 'react';
 function NavTabs({ currentPage, handlePageChange }) {
   return (
 
-    <ul className="nav nav-tabs bg-warning">
+    <ul className="nav nav-tabs">
       <h1>Brenn Voyles</h1>
       <li className="nav-item">
         <a
           href="#aboutMe"
-          onClick={() => handlePageChange('About Me')}
-          className={currentPage === 'About Me' ? 'nav-link active' : 'nav-link'}
+          onClick={() => handlePageChange('AboutMe')}
+          className={currentPage === 'AboutMe' ? 'nav-link active' : 'nav-link'}
         >
           About Me
         </a>
