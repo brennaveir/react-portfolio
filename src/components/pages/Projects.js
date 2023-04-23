@@ -1,5 +1,7 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
+import Accordion from 'react-bootstrap/Accordion';
+import ListGroup from 'react-bootstrap/ListGroup';
 // import Button from 'react-bootstrap/Button';
 // import Col from 'react-bootstrap/Col';
 // import Row from 'react-bootstrap/Row';
@@ -14,28 +16,46 @@ export default function Projects() {
           <h1 className=" sm:text-4xl text-3xl font-medium title-font mb-4 text-danger">
             Apps I've Built
           </h1>
-          <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo
-            facilis repellat ab cupiditate alias vero aliquid obcaecati quisquam
-            fuga dolore.
-          </p>
+          <ListGroup className="list-group-flush">
+        <ListGroup.Item className="skillsList">
+          <img src="./javascript.png" width="70" alt="Javascript logo"></img>
+          <img src="./html.png" width="45" alt="html logo"></img>
+             <img src="./css.png" width="45" alt="css logo"></img>
+             <img src="./nodejs.png" width="60" alt="node.js logo"></img>
+             <img src="./express.jpg" width="60" alt="express logo"></img>
+
+          <img src="./handlebars.png" width="35" alt="handlebars logo"></img>
+          <img src="./logo192.png" width="35" alt="react logo"></img>
+       <img src="./mysql.png" width="35" alt="mysql logo"></img>
+       <img src="./mongodb.png" width="45" alt="mongodb logo"></img>
+       <img src="./mongoose.png" width="45" alt="mongoose logo"></img>
+      
+        </ListGroup.Item>
+      </ListGroup>
         </div>
         <div className="projectContainer container m-4 p-4">
          
           {projectList.map((project) => (
-            <Card className="card" style={{ width: '50rem' }}>
-              <Card.Title>{project.name}</Card.Title>
-              <div className="imageContainer">
-                <Card.Img className="cardImage" variant="top" src={project.image} />
-              </div>
-               
-        <Card.Body>
-          <Card.Text>
-            
-            {project.description}
-          </Card.Text>
-            </Card.Body>
-          </Card>
+           <Card className="card" style={{ width: '100rem' }}>
+            <div className='imageContainer' style={{ width: '90%' }}>
+           <Card.Img className="cardImage" variant="top" src={project.image} />
+           </div>
+           <Card.Body>
+             <Card.Title>{project.name}</Card.Title>
+             <Accordion defaultActiveKey="1" flush>
+      <Accordion.Item eventKey="1">
+        <Accordion.Header>Description</Accordion.Header>
+        <Accordion.Body>
+          {project.description}
+        </Accordion.Body>
+      </Accordion.Item>
+      </Accordion>
+           </Card.Body>
+           <Card.Body>
+             <Card.Link href={project.repository}><img src='./GitHub-Mark.png' width="40" alt="github logo"></img></Card.Link>
+             <Card.Link href={project.link}><img src="./1200px-Simpleicons_Interface_link-symbol.svg.png" width="30" alt="link"></img></Card.Link>
+           </Card.Body>
+         </Card>
           
           ))}
         </div>

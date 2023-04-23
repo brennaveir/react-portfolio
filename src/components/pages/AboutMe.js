@@ -4,10 +4,10 @@ import Image from 'react-bootstrap/Image';
 export default function AboutMe() {
   return (
     <div className="sectionContainer">
-      <div className="aboutContainer d-flex flex-column align-items-center m-5">
-    <Image className="m-2 p-2"src="./porfolio-pic2.jpg"  alt="Brenn Voyles" rounded/>
+      <div className="aboutContainer d-flex flex-column align-items-center">
+    <Image className="aboutMePic m-5"src="./porfolio-pic2.jpg"  alt="Brenn Voyles" rounded/>
       <h1 className="mt-5 ">About me</h1>
-      <p className="m-4 text-center">
+      <p className="aboutText m-4 text-center">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque
         velit, lobortis ut magna varius, blandit rhoncus sem. Morbi lacinia nisi
         ac dui fermentum, sed luctus urna tincidunt. Etiam ut feugiat ex. Cras
