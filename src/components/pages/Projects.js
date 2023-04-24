@@ -49,8 +49,8 @@ export default function Projects() {
                 </Accordion>
               </Card.Body>
               <Card.Body>
-                <Card.Link href={project.repository}><img src='./GitHub-Mark.png' width="40" alt="github logo"></img></Card.Link>
-                <Card.Link href={project.link}><img src="./1200px-Simpleicons_Interface_link-symbol.svg.png" width="30" alt="link"></img></Card.Link>
+                <Card.Link href={project.repository} target="_blank"><img src='./GitHub-Mark.png' width="40" alt="github logo"></img></Card.Link>
+                <Card.Link href={project.link} target="_blank"><img src="./1200px-Simpleicons_Interface_link-symbol.svg.png" width="30" alt="link"></img></Card.Link>
               </Card.Body>
             </Card>
 

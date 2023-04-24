@@ -30,24 +30,34 @@ function HandleForm() {
       setMessage(inputValue);
     }
 
-    if (!fullName && email && message) {
-      setErrorMessage('You must enter your name!')
-    }
-    if (!email && fullName && message) {
-      setErrorMessage('You must include your email!')
-    }
   };
 
   const handleFormSubmit = (e) => {
-    e.preventDefault();
     if (!validateEmail(email)) {
-      alert('Email is invalid');
+      setErrorMessage('Email is invalid');
       return;
     }
+     if (!fullName) {
+      setErrorMessage('You must enter your name!')
+      return;
+    }
+    if (!email) {
+      setErrorMessage('You must include your email!')
+      return;
+    }
+    if (!message) {
+      setErrorMessage('You must include your message!')
+      return
+    }
+  else {
+    e.preventDefault()
+     window.location.reload()
     setFullName('');
     setMessage('');
     setEmail('');
     alert(`Hello ${fullName}`);
+  }
+   
   };
 
 
