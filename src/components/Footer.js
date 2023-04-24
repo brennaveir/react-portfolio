@@ -11,7 +11,7 @@ function Footer() {
                  <Nav className= "footer">
                         <Nav.Link href="https://github.com/brennaveir">Github</Nav.Link>
                         <Nav.Link href="https://www.linkedin.com/feed/">LinkedIn</Nav.Link>
-                        <Nav.Link href="#pricing">??????</Nav.Link>
+                        <Nav.Link href="https://stackoverflow.com/users/21717949/brennaveir">Stackoverflow</Nav.Link>
                     </Nav>
                 </Container>
             </Navbar>

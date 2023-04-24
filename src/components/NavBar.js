@@ -8,7 +8,7 @@ import Image from 'react-bootstrap/Image'
 function NavBar({ currentPage, handlePageChange }) {
   return (
     <>
-       <Navbar bg="dark" variant="dark">
+       <Navbar className="flex-wrap" bg="dark" variant="dark">
         <Container>
           <Navbar.Brand href="/home">
             <Image
@@ -17,7 +17,7 @@ function NavBar({ currentPage, handlePageChange }) {
               src="./profile-pic1.jpg"
               width="50"
               height="50"
-              className="d-inline-block align-top"
+              // className="d-inline-block align-top"
             />
           
           </Navbar.Brand>
@@ -29,7 +29,7 @@ function NavBar({ currentPage, handlePageChange }) {
     <Nav className="justify-content-end" activeKey="/home" bg="">
       <Nav.Item >
         <Nav.Link
-          href="/home"
+          href="#home"
           onClick={() => handlePageChange('AboutMe')}
           className={currentPage === 'AboutMe' ? 'nav-link active' : 'nav-link'}>About Me</Nav.Link>
       </Nav.Item>
@@ -43,7 +43,7 @@ function NavBar({ currentPage, handlePageChange }) {
         </Nav.Link>
       </Nav.Item>
       <Nav.Item>
-        <Nav.Link eventKey="link-2"
+        <Nav.Link 
           href="#projects"
           onClick={() => handlePageChange('Projects')}
           className={currentPage === 'Projects' ? 'nav-link active' : 'nav-link'}>
@@ -60,45 +60,7 @@ function NavBar({ currentPage, handlePageChange }) {
       </Nav.Item>
     </Nav>
     </>
-    // <ul className="nav nav-tabs">
-    //   <h1>Brenn Voyles</h1>
-    //   <li className="nav-item">
-    //     <a
-    //       href="#aboutMe"
-    //       onClick={() => handlePageChange('AboutMe')}
-    //       className={currentPage === 'AboutMe' ? 'nav-link active' : 'nav-link'}
-    //     >
-    //       About Me
-    //     </a>
-    //   </li>
-    //   <li className="nav-item">
-    //     <a
-    //       href="#contact"
-    //       onClick={() => handlePageChange('Contact')}
-    //       className={currentPage === 'Contact' ? 'nav-link active' : 'nav-link'}
-    //     >
-    //       Contact
-    //     </a>
-    //   </li>
-    //   <li className="nav-item">
-    //     <a
-    //       href="#projects"
-    //       onClick={() => handlePageChange('Projects')}
-    //       className={currentPage === 'Projects' ? 'nav-link active' : 'nav-link'}
-    //     >
-    //       Projects
-    //     </a>
-    //   </li>
-    //   <li className="nav-item">
-    //     <a
-    //       href="#resume"
-    //       onClick={() => handlePageChange('Resume')}
-    //       className={currentPage === 'Resume' ? 'nav-link active' : 'nav-link'}
-    //     >
-    //       Resume
-    //     </a>
-    //   </li>
-    // </ul>
+    
   );
 }
 
