@@ -9,9 +9,9 @@ function Footer() {
             <Navbar bg="dark" variant="light">
                 <Container className="justify-content-around">
                  <Nav className= "footer">
-                        <Nav.Link href="https://github.com/brennaveir">Github</Nav.Link>
-                        <Nav.Link href="https://www.linkedin.com/feed/">LinkedIn</Nav.Link>
-                        <Nav.Link href="https://stackoverflow.com/users/21717949/brennaveir">Stackoverflow</Nav.Link>
+                        <Nav.Link href="https://github.com/brennaveir" target="_blank">Github</Nav.Link>
+                        <Nav.Link href="https://www.linkedin.com/in/brennvoyles/" target="_blank">LinkedIn</Nav.Link>
+                        <Nav.Link href="https://stackoverflow.com/users/21717949/brennaveir" target="_blank">Stackoverflow</Nav.Link>
                     </Nav>
                 </Container>
             </Navbar>
