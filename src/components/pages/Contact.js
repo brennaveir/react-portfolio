@@ -1,80 +1,47 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import { validateEmail } from '../../utils/helpers';
+import { useFormInputValidation } from "react-form-input-validation";
 
+const ValidationForm = () => {
+  const [fields, errors, form] = useFormInputValidation({
+    fullName: "",
+    email: "",
+    message: "",
+  }, {
+    fullName: "required",
+    email: "required|email",
+    message: "required"
+  });
 
-function HandleForm() {
-  // Create state variables for the fields in the form
-  // We are also setting their initial values to an empty string
-  const [email, setEmail] = useState('');
-  const [fullName, setFullName] = useState('');
-  const [message, setMessage] = useState('');
-  const [errorMessage, setErrorMessage] = useState('');
-
-
-  const handleInputChange = (e) => {
-    // Getting the value and name of the input which triggered the change
-    const { target } = e;
-    const inputType = target.name;
-    const inputValue = target.value;
-
-
-
-    // Based on the input type, we set the state of either email, username, and password
-    if (inputType === 'fullName') {
-      setFullName(inputValue);
-    } else if (inputType === 'email') {
-      setEmail(inputValue);
-    } else {
-      setMessage(inputValue);
+  const onSubmit = async (event) => {
+    const isValid = await form.validate(event);
+    if (isValid) {
+      console.log(fields, errors);
+      alert(`THANK YOU! ${fields.fullName}`)
+      window.location.reload()
+      
     }
-
-  };
-
-  const handleFormSubmit = (e) => {
-    if (!validateEmail(email)) {
-      setErrorMessage('Email is invalid');
-      return;
-    }
-     if (!fullName) {
-      setErrorMessage('You must enter your name!')
-      return;
-    }
-    if (!email) {
-      setErrorMessage('You must include your email!')
-      return;
-    }
-    if (!message) {
-      setErrorMessage('You must include your message!')
-      return
-    }
-  else {
-    e.preventDefault()
-     window.location.reload()
-    setFullName('');
-    setMessage('');
-    setEmail('');
-    alert(`Hello ${fullName}`);
   }
-   
-  };
 
 
-
-  return (
-    <>
+  return (<React.Fragment>
       <section className="pageContainer p-5 d-flex justify-content-center">
-        <Form className="contactForm p-5 d-flex flex-column" style={{ width: '50%' }}>
+        <Form className="contactForm p-5 d-flex flex-column" onSubmit={onSubmit} style={{ width: '50%' }}>
           <Form.Group className="mb-3" controlId="nameInput">
             <Form.Label>
               Name
             </Form.Label>
             <Form.Control
               name="fullName"
-              value={fullName}
+              value={fields.fullName}
               placeholder="Please enter your first and last name"
-              onChange={handleInputChange} />
+              onChange={form.handleChangeEvent} />
+              <label className="error">
+        {errors.fullName
+          ? errors.fullName
+          : ""}
+      </label>
           </Form.Group>
           <Form.Group className="mb-3" controlId="emailInput">
             <Form.Label >
@@ -82,9 +49,14 @@ function HandleForm() {
             </Form.Label>
             <Form.Control
               placeholder="name@example.com"
-              value={email}
+              value={fields.email}
               name="email"
-              onChange={handleInputChange} />
+              onChange={form.handleChangeEvent} />
+              <label className="error">
+        {errors.email
+          ? errors.email
+          : ""}
+      </label>
           </Form.Group>
           <Form.Group className="mb-3" controlId="messageInput">
             <Form.Label>Message</Form.Label>
@@ -93,25 +65,27 @@ function HandleForm() {
               rows={3}
               // type="message" 
               placeholder="Type a message here"
-              value={message}
+              value={fields.message}
               name="message"
-              onChange={handleInputChange} />
+              onChange={form.handleChangeEvent} />
+              <label className="error">
+        {errors.message
+          ? errors.message
+          : ""}
+      </label>
           </Form.Group>
           <Button
-            type="button"
-            onclick={handleFormSubmit}>
+            type="submit"
+            >
             Submit
           </Button>
-          {errorMessage && (
-            <div>
-              <p className="error-text">{errorMessage}</p>
-            </div>
-          )}
+        
         </Form>
         
       </section>
-    </>
+    </React.Fragment>
   );
-}
+          }
+  
 
-export default HandleForm;
+  export default ValidationForm;
