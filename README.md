@@ -15,12 +15,14 @@
 A single page application portfolio for a web developer. Contains a profile picture, short bio, contact form, projects, and resume.
 
 ## Usage
+Visit the deployed site [here](https://brennaveir.github.io/react-portfolio/)
+
+
 ![Screenshot1](./public/screenshot1.png) 
 ![Screenshot2](./public/screenshot2.png) 
 ![Screenshot3](./public/screenshot3.png)
 ![Screenshot4](./public/screenshot4.png)       
 
-Visit the deployed site [here](https://brennaveir.github.io/react-portfolio/)
 
 ## Contributors
 Brenn Voyles
