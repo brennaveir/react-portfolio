@@ -18,7 +18,7 @@ const ValidationForm = () => {
     const isValid = await form.validate(event);
     if (isValid) {
       console.log(fields, errors);
-      alert(`THANK YOU! ${fields.fullName}`)
+      alert(`THANK YOU ${fields.fullName}!`)
       window.location.reload()
       
     }
@@ -62,7 +62,7 @@ const ValidationForm = () => {
             <Form.Label>Message</Form.Label>
             <Form.Control
               as="textarea"
-              rows={3}
+              rows={10}
               // type="message" 
               placeholder="Type a message here"
               value={fields.message}
