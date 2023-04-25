@@ -2,6 +2,7 @@ import React from 'react';
 import Card from 'react-bootstrap/Card';
 import Accordion from 'react-bootstrap/Accordion';
 import ListGroup from 'react-bootstrap/ListGroup';
+
 import { projectList } from "../../projectList"
 
 export default function Projects() {
@@ -20,7 +21,6 @@ export default function Projects() {
               <img src="./css.png" width="45" alt="css logo"></img>
               <img src="./nodejs.png" width="60" alt="node.js logo"></img>
               <img src="./express.jpg" width="60" alt="express logo"></img>
-
               <img src="./handlebars.png" width="35" alt="handlebars logo"></img>
               <img src="./logo192.png" width="35" alt="react logo"></img>
               <img src="./mysql.png" width="35" alt="mysql logo"></img>
