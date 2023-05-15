@@ -17,7 +17,6 @@ const ValidationForm = () => {
   const onSubmit = async (event) => {
     const isValid = await form.validate(event);
     if (isValid) {
-      console.log(fields, errors);
       alert(`THANK YOU ${fields.fullName}!`)
       window.location.reload()
       

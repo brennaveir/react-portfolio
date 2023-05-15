@@ -40,6 +40,13 @@ export const projectList = [
         image: "./Screenshot_7.png",
         repository: "https://github.com/brennaveir/employee-tracker",
         description: "A command-line application that manages a company's employee database, using Node.js, Inquirer, and MySQL"
+    },
+    {
+    name: "4096",
+    link: "https://highfives-4096.herokuapp.com/",
+    image: "./4096.png",
+    repository: "https://github.com/brennaveir/4096",
+    description: "An application to play the classic game 2048 with a twist. Created with react, express.js, graphql, javascript"
     }
 ]
 

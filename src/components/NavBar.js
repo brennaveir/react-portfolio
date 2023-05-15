@@ -10,7 +10,9 @@ function NavBar({ currentPage, handlePageChange }) {
     <>
        <Navbar className="flex-wrap" bg="dark" variant="dark">
         <Container>
-          <Navbar.Brand href="/home">
+          <Navbar.Brand 
+          href="#home"
+          onClick={() => handlePageChange('AboutMe')}>
             <Image
             roundedCircle="true"
               alt=""
